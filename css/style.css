@@ -1,0 +1,264 @@
+/* global rules  */
+:root {
+  --main-margin: 4rem;
+  --background-color: #edf1fc;
+  --text-color: #1b2147;
+  --heading-color: #1b2147;
+  --main-color: #0a4678;
+  --accent-color: #f8bf0e;
+  --background-white: #ffffff;
+  --main-transition: 0.5s;
+  --font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
+  transition: 0.5s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 769px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-h {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+.text-color {
+  color: var(--heading-color);
+}
+.main-color {
+  color: var(--main-color);
+}
+.accent-color {
+  color: var(--accent-color);
+}
+.bg-accent-color {
+  background-color: var(--accent-color);
+}
+.bg-main-color {
+  background-color: var(--main-color);
+}
+.bg-main {
+  background-color: var(--background-color);
+}
+.main-btn {
+  background-color: var(--accent-color);
+  border: none;
+  font-weight: 500;
+  border-radius: 4px;
+}
+.main-btn:hover {
+  background-color: #ebb40c !important;
+}
+
+/* end global rules  */
+
+/* Start Header style */
+header {
+  height: 10rem;
+}
+.logo {
+  width: 12.5rem;
+  height: 3.125rem;
+}
+
+.navbar {
+  transform: translateY(calc(50% - 2.5rem));
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin-top: 1rem;
+    transform: translateY(0);
+  }
+}
+
+nav ul > li > a {
+  color: white !important;
+}
+.dropdown-item {
+  color: black !important;
+}
+
+nav .phone {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: black;
+  background-color: var(--accent-color);
+}
+
+.nav-link.active {
+  color: var(--accent-color) !important;
+}
+/* End Header style */
+/* start Home style */
+.heading-home {
+  width: 80%;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+main {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(10, 70, 120, 0.3) 0%,
+      rgba(10, 70, 120, 0.3) 100%
+    ),
+    url(../assets/imges/home.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* End Home style */
+
+/* Start About Us Style */
+
+.about-list li {
+  margin-bottom: 1rem;
+}
+.about-list li i {
+  color: var(--accent-color);
+  font-size: medium;
+  margin-right: 4px;
+}
+.about-img {
+  position: relative;
+  z-index: 1;
+}
+.about-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .about-img::after {
+    display: none;
+  }
+}
+
+/* End About Us Style */
+/* Start Counter Style */
+.counter i {
+  font-size: 3.3rem;
+  color: var(--accent-color);
+}
+.counter h2 {
+  font-size: 3.5rem;
+}
+.counter h2 + p {
+  text-align: end;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.plus {
+  transform: translateY(80%);
+  display: none;
+}
+/* End Counter Style */
+/* Start service Style */
+.service-card {
+  transition: transform 0.3s ease;
+}
+.service-card:hover,
+.service-card-one {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.services .card-body i {
+  color: #a4d6f1;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+/* End service Style */
+
+.heading-solveing {
+  width: 80%;
+  font-size: 3rem;
+  font-weight: 6 00;
+}
+
+/* start choose us Style */
+.Choose i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+/* end choose us Style */
+/* start contact us Style */
+.contact {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(10, 70, 120, 0.5) 0%,
+      rgba(10, 70, 120, 0.5) 100%
+    ),
+    url(../assets/imges/contact.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.heading-contact {
+  text-align: center;
+  width: 80%;
+  font-size: 3rem;
+  font-weight: 500;
+}
+/* end contact us Style */
+/* Start testimonial Style */
+.testimonial-card {
+  position: relative;
+}
+.testimonial-card i {
+  color: #a4d6f1;
+}
+.testimonial-img {
+  position: absolute;
+  top: calc(100% - 2.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial-card {
+    position: unset;
+  }
+  .testimonial-img {
+    position: unset;
+    display: inline !important;
+  }
+}
+/* End testimonial Style */
